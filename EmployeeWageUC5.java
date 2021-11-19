@@ -9,7 +9,7 @@ public class EmployeeWageUC5 {
 		//Variables
 		int empCheck;
 		int empHr = 0;
-
+		int totalSalary=0;
 		for (int i=1;i<=20;i++) {
 			empCheck = (int)(Math.floor(Math.random() * 10) % 3);
 			switch(empCheck) {
@@ -26,7 +26,9 @@ public class EmployeeWageUC5 {
 				break;
 			}
 			double empSalary = empHr * SALARY_PER_HOUR;
-			System.out.println("Emp Wage Day "+i+": "+empSalary);
+			//totalSalary+=empSalary;	
+			 totalSalary = totalSalary + (int)empSalary;
 		}
+		System.out.println("Monthly Emp Wage : "+totalSalary);
 	}
 }
